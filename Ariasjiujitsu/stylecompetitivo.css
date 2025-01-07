@@ -1,0 +1,236 @@
+/* Estilo global para la página */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Encabezado con fondo hero */
+header {
+    position: relative;
+    height: 50vh;
+    background-image: url('imagenes/portadatradicional.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+header .content {
+    position: relative;
+    z-index: 2;
+}
+
+header h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin: 0;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 10px;
+}
+
+/* Navegación */
+nav {
+    border-top: 4px solid #ff0000;
+    background-color: #000;
+    padding: 1.2% 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1rem;
+    padding: 10px 15px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #cb0707;
+    color: #fff;
+    border-radius: 4px;
+}
+
+nav a:active{
+    transition: 0.1s;
+    transform: scale(0.90);
+}
+
+
+
+
+/* Sección principal */
+section {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #f9f9f9;
+    border-radius: 12px;
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Contenedor del contenido */
+.content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+/* Cuadro de texto */
+.text-box {
+    flex: 1;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: justify;
+}
+
+.text-box h2 {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.text-box p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #555;
+    margin: 0;
+}
+
+/* Cuadro de imagen */
+.image-box {
+    flex: 0 0 40%; /* Tamaño fijo para las imágenes */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Alternar dirección para secciones pares */
+section:nth-child(even) .content {
+    flex-direction: row-reverse;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .text-box {
+        text-align: center;
+    }
+
+    .image-box {
+        margin: 0 auto;
+    }
+}
+
+
+/* Footer */
+footer {
+    background-color: #222; /* Fondo oscuro para contraste */
+    color: #f9f9f9; /* Texto claro para visibilidad */
+    text-align: center; /* Centra el contenido */
+    padding: 20px 10px; /* Espaciado interno */
+    border-top: 4px solid #ff0000; /* Línea decorativa en la parte superior */
+    box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.2); /* Sombra sutil para elevar el diseño */
+}
+
+/* Estilo del texto */
+footer p {
+    margin: 5px 0; /* Espaciado entre líneas */
+    font-size: 1rem; /* Tamaño de fuente estándar */
+    line-height: 1.5; /* Espaciado entre líneas */
+}
+
+/* Estilo de los enlaces */
+footer a {
+    color: #ff0d00; /* Color azul para destacar enlaces */
+    text-decoration: none; /* Sin subrayado */
+    font-weight: bold; /* Negrita para destacar */
+    transition: color 0.3s ease; /* Transición suave */
+}
+
+footer a:hover {
+    color: #b315007a; /* Color más oscuro al pasar el cursor */
+}
+
+/* Estilo de los iconos */
+footer img {
+    margin: 10px 5px; /* Espaciado entre los iconos */
+    transition: transform 0.3s ease, opacity 0.3s ease; /* Transición suave para hover */
+    opacity: 0.8; /* Ligera transparencia */
+}
+
+footer img:hover {
+    transform: scale(1.2); /* Aumenta ligeramente el tamaño al pasar el cursor */
+    opacity: 1; /* Restaura la opacidad completa */
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    footer {
+        padding: 15px 5px; /* Ajusta el espaciado en pantallas pequeñas */
+    }
+
+    footer p {
+        font-size: 0.9rem; /* Reduce el tamaño del texto */
+    }
+
+    footer img {
+        width: 35px; /* Reduce el tamaño de los iconos */
+    }
+}
